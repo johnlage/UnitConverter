@@ -1,23 +1,167 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="UCViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="top" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="8wt-wf-9HL">
+                                <items>
+                                    <navigationItem title="3-way Number Converter" id="WDT-o4-FgS"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-xZ-9tN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" type="user" id="JpF-QW-JI0"/>
+                                    <constraint firstAttribute="height" constant="62" id="NLb-mS-lsy"/>
+                                </constraints>
+                                <string key="text">Please Enter A Number in One Blank 
+Then Tap the button next to 
+THAT blank to convert</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4xM-7J-PU4">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="PSd-xa-zhA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Binary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbD-BS-JFX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Decimal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="533-7D-Y2a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-1t-zLe">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hexadecimal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I94-Pi-lQk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-IX-leQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-IB-e4t">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BinaryConvert:" destination="2" eventType="touchUpInside" id="QZZ-4g-Iyy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-hF-kdu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DecimalConvert:" destination="2" eventType="touchUpInside" id="Baa-t7-9Of"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGm-ng-xut">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HexaConvert:" destination="2" eventType="touchUpInside" id="3db-AK-LwO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jj1-AV-Vp4">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zNg-IX-leQ" secondAttribute="bottom" constant="189" id="2lD-Fn-kGf"/>
+                            <constraint firstAttribute="trailing" secondItem="jj1-AV-Vp4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3gg-Jm-iDw"/>
+                            <constraint firstItem="jj1-AV-Vp4" firstAttribute="leading" secondItem="Zhl-1t-zLe" secondAttribute="leading" type="default" id="5PC-xm-Pvf"/>
+                            <constraint firstItem="rCj-IB-e4t" firstAttribute="leading" secondItem="Z1b-hF-kdu" secondAttribute="leading" type="default" id="6bN-Pp-ghq"/>
+                            <constraint firstItem="4xM-7J-PU4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="167" id="6g3-w8-Bwz"/>
+                            <constraint firstItem="x0z-xZ-9tN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="55" id="Aht-bs-dve"/>
+                            <constraint firstAttribute="trailing" secondItem="Zhl-1t-zLe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="F5L-bQ-oO8"/>
+                            <constraint firstItem="533-7D-Y2a" firstAttribute="centerX" secondItem="TbD-BS-JFX" secondAttribute="centerX" type="default" id="FQp-c3-aRC"/>
+                            <constraint firstItem="TbD-BS-JFX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="171" id="J8E-wf-Wbe"/>
+                            <constraint firstItem="JGm-ng-xut" firstAttribute="leading" secondItem="Z1b-hF-kdu" secondAttribute="leading" type="default" id="KIO-sg-6qa"/>
+                            <constraint firstAttribute="trailing" secondItem="zNg-IX-leQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="L7K-WG-O4l"/>
+                            <constraint firstItem="533-7D-Y2a" firstAttribute="top" secondItem="3" secondAttribute="top" constant="257" id="N9c-QW-dNd"/>
+                            <constraint firstAttribute="bottom" secondItem="JGm-ng-xut" secondAttribute="bottom" constant="144" id="Nje-NG-8Pj"/>
+                            <constraint firstItem="jj1-AV-Vp4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="253" id="QEY-6Z-GVU"/>
+                            <constraint firstItem="rCj-IB-e4t" firstAttribute="top" secondItem="4xM-7J-PU4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QUc-T1-ih5"/>
+                            <constraint firstAttribute="bottom" secondItem="Z1b-hF-kdu" secondAttribute="bottom" constant="219" id="Su8-7f-Cvm"/>
+                            <constraint firstItem="jj1-AV-Vp4" firstAttribute="baseline" secondItem="Zhl-1t-zLe" secondAttribute="baseline" type="default" id="U5O-fk-YaM"/>
+                            <constraint firstItem="I94-Pi-lQk" firstAttribute="centerX" secondItem="533-7D-Y2a" secondAttribute="centerX" type="default" id="UOH-i4-idX"/>
+                            <constraint firstItem="8wt-wf-9HL" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VDR-ye-O5s"/>
+                            <constraint firstItem="8wt-wf-9HL" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Xhg-wn-iN6"/>
+                            <constraint firstItem="8wt-wf-9HL" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Y7o-Jx-Pmh"/>
+                            <constraint firstItem="jj1-AV-Vp4" firstAttribute="leading" secondItem="4xM-7J-PU4" secondAttribute="leading" type="default" id="YHp-TF-E6c"/>
+                            <constraint firstItem="jj1-AV-Vp4" firstAttribute="leading" secondItem="zNg-IX-leQ" secondAttribute="leading" type="default" id="ba0-Or-3fB"/>
+                            <constraint firstItem="533-7D-Y2a" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cGv-E9-hlT"/>
+                            <constraint firstItem="x0z-xZ-9tN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="11" id="gIp-3P-q9d"/>
+                            <constraint firstItem="rCj-IB-e4t" firstAttribute="centerX" secondItem="8wt-wf-9HL" secondAttribute="centerX" type="default" id="icQ-z2-YxS"/>
+                            <constraint firstAttribute="bottom" secondItem="I94-Pi-lQk" secondAttribute="bottom" constant="194" id="jYk-Ua-Suf"/>
+                            <constraint firstAttribute="trailing" secondItem="4xM-7J-PU4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xM0-87-qWZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BinaryText" destination="4xM-7J-PU4" id="7SJ-Ka-gy1"/>
+                        <outlet property="DecimalText" destination="jj1-AV-Vp4" id="h8B-pQ-c5R"/>
+                        <outlet property="HexaText" destination="zNg-IX-leQ" id="03R-Au-aMZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-93" y="70"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="BinaryConvert:"/>
+                <relationship kind="action" name="DecimalConvert:"/>
+                <relationship kind="action" name="HexaConvert:"/>
+                <relationship kind="outlet" name="BinaryText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="DecimalText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="HexaText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
